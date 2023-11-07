@@ -9,12 +9,12 @@ Sovellus on tehty harjoitustyönä Helsingin yliopiston Ohjelmistotekniikka-kurs
 Python version `3.10`
 
 ## Dokumentaatio
-Käyttöohje<br>
-Vaatimusmäärittely<br>
-Arkkitehtuurikuvaus<br>
-Testausdokumentti<br>
-Työaikakirjanpito<br>
-Changelog<br>
+- Käyttöohje<br>
+- Vaatimusmäärittely<br>
+- Arkkitehtuurikuvaus<br>
+- Testausdokumentti<br>
+- Työaikakirjanpito<br>
+- Changelog<br>
 
 ## Asennus
 **tulossa**
