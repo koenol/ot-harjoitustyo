@@ -16,7 +16,7 @@ Python version `3.10`
 -   [Vaatimusmäärittely](https://github.com/koenol/ot-harjoitustyo/tree/main/dokumentaatio/vaatimusmaarittely.md)<br>
 -   Arkkitehtuurikuvaus<br>
 -   Testausdokumentti<br>
--   Työaikakirjanpito<br>
+-   [Tuntikirjanpito](https://github.com/koenol/ot-harjoitustyo/tree/main/dokumentaatio/tuntikirjanpito.md)<br>
 -   Changelog<br>
 
 ## Asennus
