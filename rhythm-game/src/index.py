@@ -29,7 +29,8 @@ def main():
         play_button.draw(screen)
         pygame.display.update()
 
-def create_tables(crs):
+def create_tables(connection):
+    crs = connection
     crs.execute('''
         CREATE TABLE Scores (
             id integer primary key,
