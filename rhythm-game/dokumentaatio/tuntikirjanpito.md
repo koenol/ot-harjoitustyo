@@ -6,4 +6,4 @@
 | 21.11. | 1,5  | Harjoitustyön viikottaiset vaatimukset                   |
 | 21.11. | 0,5  | Repon uudelleenjärjestys ja linkkien korjauksia          |
 | 21.11. | 0,5  | SQL kertausta ja yhteyden luonti                         |
-|  yht   | 9    |                                                          |
+|  yht   | 8,5  |                                                          |
