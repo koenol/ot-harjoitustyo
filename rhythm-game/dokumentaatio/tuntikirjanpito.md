@@ -5,3 +5,4 @@
 | 21.11. | 2    | Pygame-libraryyn tutustumista                            |
 | 21.11. | 1,5  | Harjoitustyön viikottaiset vaatimukset                   |
 | 21.11. | 0,5  | Repon uudelleenjärjestys ja linkkien korjauksia          |
+|  yht   | 8,5  |                                                          |
