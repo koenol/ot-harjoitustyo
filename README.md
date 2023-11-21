@@ -13,11 +13,11 @@ Python version `3.10`
 ## Dokumentaatio
 
 -   Käyttöohje<br>
--   [Vaatimusmäärittely](https://github.com/koenol/ot-harjoitustyo/tree/main/dokumentaatio/vaatimusmaarittely.md)<br>
+-   [Vaatimusmäärittely](https://github.com/koenol/ot-harjoitustyo/tree/main/rhythm-game/dokumentaatio/vaatimusmaarittely.md)<br>
 -   Arkkitehtuurikuvaus<br>
 -   Testausdokumentti<br>
--   [Tuntikirjanpito](https://github.com/koenol/ot-harjoitustyo/tree/main/dokumentaatio/tuntikirjanpito.md)<br>
--   Changelog<br>
+-   [Tuntikirjanpito](https://github.com/koenol/ot-harjoitustyo/tree/main/rhythm-game/dokumentaatio/tuntikirjanpito.md)<br>
+-   [Changelog](https://github.com/koenol/ot-harjoitustyo/tree/main/rhythm-game/dokumentaatio/changelog.md)<br>
 
 ## Asennus
 
