@@ -1,5 +1,5 @@
 import unittest
-from ..elements import Button
+from ..ui.elements import Button
 
 class TestButton(unittest.TestCase):
     def setUp(self):
