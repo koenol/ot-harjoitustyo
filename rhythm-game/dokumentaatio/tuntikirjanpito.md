@@ -12,4 +12,6 @@
 | 28.11. | 0,75  | refractored db connection                                |
 | 28.11. | 0,5   | refractored pygame init/main view                        |
 | 28.11. | 0,5   | uusi näkymä: game-view                                   |
+| 28.11. | 0,5   | added test banner with custom font                       |
+| 28.11. | 0,75  | lisätty taustamusiikki soundcloud.com game-view          |
 |  yht   | 12,25 |                                                          |
