@@ -14,7 +14,7 @@ konfiguraatio-asetukset (kts. Jatkokehitysideoita)
 
 Sovellus koostuu alustavasti kolmesta eri näkymästä (v1).
 
-<img src="https://github.com/koenol/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/kayttoliittyma-hahmotelma-v1.png" width="750">
+<img src="https://github.com/koenol/ot-harjoitustyo/blob/main/rhythm-game/dokumentaatio/kuvat/kayttoliittyma-hahmotelma-v1.png" width="750">
 
 Sovellus aukeaa main-näkymään jossa pelaaja näkee parhaat tulokset. Pelaaja pystyy aloittamaan uuden pelin painamalla "Play" näppäintä, jonka jälkeen sovellus siirtyy game-näkymään, joka aloittaa pelin. Kun peli päättyy
 näkymä vaihtuu result-näkymään josta pelaaja näkee tuloksen ja antamaan nimimerkin (huom. alustava suunnitelmassa jos tulos ei yllä top10 listalle niin tulosta tai nimeä ei tallenneta mihinkään, muita vaihtoehtoja näkymälle kts. Jatkokehitysideoita).
