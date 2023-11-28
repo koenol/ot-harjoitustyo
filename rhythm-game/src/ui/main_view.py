@@ -36,7 +36,7 @@ class MainView:
                             GameView()
                             
 
-            main_surface.fill((255, 255, 255))
+            main_surface.fill((246, 246, 246))
             main_surface.blit(banner_text, banner_text_rect)
             play_button.draw(main_surface)
             pygame.display.update()

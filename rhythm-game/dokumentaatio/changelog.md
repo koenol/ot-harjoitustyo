@@ -13,3 +13,4 @@
 -   pelaaja pystyy käynnistämään nyt uuden näkymän play-painikkeesta (game-view), mutta ei vielä pysty pelaamaan (ruksista pelaaja palaa toistaiseksi alkuvalikkoon)
 -   alkuvalikkoon lisättiin pelin banneri
 -   lisättiin game-view taustamusiikki
+-   muokattiin bgm-väriä vähemmän silmiä rasittavaks: white (255, 255, 255) -> white smoke (246, 246, 246)

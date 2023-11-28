@@ -5,7 +5,7 @@ class Button:
         self.rect = pygame.Rect(x, y, width, height)
         self.text = text
         self.action = action
-        self.color = (255, 255, 255)
+        self.color = (246, 246, 246)
 
     def draw(self, screen):
         pygame.draw.rect(screen, self.color, self.rect)

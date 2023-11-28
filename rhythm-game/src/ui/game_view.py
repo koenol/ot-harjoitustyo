@@ -10,6 +10,7 @@ class GameView:
             game_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
             pygame.display.set_caption("Rytmipeli - Game")
 
+            #refractor this to elements
             pygame.mixer.music.load("rhythm-game\src\static\Reminiscent-Of-Spring.mp3")
             pygame.mixer.music.play(1, 0.0, 8000)
             pygame.mixer.music.set_volume(0.40)
@@ -21,6 +22,6 @@ class GameView:
                         pygame.mixer.music.stop()
                         running = False
 
-                game_surface.fill((255, 255, 255))
+                game_surface.fill((246, 246, 246))
                 pygame.display.update()
             
