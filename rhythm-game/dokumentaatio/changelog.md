@@ -8,3 +8,6 @@
 ## Viikko4
 
 -   db refraktorointia
+-   mainview refraktorointia, high-score testidata poistettu käytöstä toistaiseksi
+-   resoluutio vaihto 1024x768 > 800x600
+-   pelaaja pystyy käynnistämään nyt uuden näkymän play-painikkeesta (game-view), mutta ei vielä pysty pelaamaan (ruksista pelaaja palaa toistaiseksi alkuvalikkoon)

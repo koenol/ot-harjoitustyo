@@ -10,4 +10,6 @@
 | 27.11. | 1     | pygame documentation                                     |
 | 28.11. | 1     | pygame documentation                                     |
 | 28.11. | 0,75  | refractored db connection                                |
+| 28.11. | 0,5   | refractored pygame init/main view                        |
+| 28.11. | 0,5   | uusi näkymä: game-view                                   |
 |  yht   | 12,25 |                                                          |
