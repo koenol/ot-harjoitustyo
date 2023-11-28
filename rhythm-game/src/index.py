@@ -3,7 +3,8 @@ from database.init_database_conn import initialize_database
 
 
 def main():
-    initialize_database()
+    #db conn temporarily disabled
+    #initialize_database()
     MainView()
 
 if __name__ == "__main__":
