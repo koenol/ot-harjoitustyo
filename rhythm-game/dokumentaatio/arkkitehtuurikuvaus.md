@@ -1,4 +1,4 @@
-## UML-kaavio (alustava / tämän hetkinen)
+## pakkauskaavio (alustava / tämän hetkinen)
 ```mermaid
 graph TD;
     index.py --> ui.MainView;
