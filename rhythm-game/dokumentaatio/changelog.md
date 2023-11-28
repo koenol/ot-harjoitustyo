@@ -7,10 +7,9 @@
 
 ## Viikko4
 
--   db refraktorointia
--   mainview refraktorointia, high-score testidata poistettu käytöstä toistaiseksi
+-   main_view refraktorointia, high-score testidata poistettu käytöstä toistaiseksi
 -   resoluutio vaihto 1024x768 > 800x600
--   pelaaja pystyy käynnistämään nyt uuden näkymän play-painikkeesta (game-view), mutta ei vielä pysty pelaamaan (ruksista pelaaja palaa toistaiseksi alkuvalikkoon)
+-   pelaaja pystyy käynnistämään nyt uuden näkymän play-painikkeesta (game_view), mutta ei vielä pysty pelaamaan (ruksista pelaaja palaa toistaiseksi alkuvalikkoon)
 -   alkuvalikkoon lisättiin pelin banneri
--   lisättiin game-view taustamusiikki
+-   lisättiin game_view taustamusiikki
 -   muokattiin bgm-väriä vähemmän silmiä rasittavaks: white (255, 255, 255) -> white smoke (246, 246, 246)

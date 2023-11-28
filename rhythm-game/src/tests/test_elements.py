@@ -1,5 +1,6 @@
 import unittest
 from ..ui.elements import Button
+from ..services.game_view import GameView
 
 
 class TestButton(unittest.TestCase):
@@ -11,3 +12,7 @@ class TestButton(unittest.TestCase):
 
     def test_button_action(self):
         self.assertEqual(self.play_button.action, "play")
+
+class TestGameView(unittest.TestCase):
+        def setUp(self):
+            gameview = GameView()

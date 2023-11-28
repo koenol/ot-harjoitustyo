@@ -7,7 +7,6 @@ Sovellus on tehty harjoitustyönä Helsingin yliopiston Ohjelmistotekniikka-kurs
 
 ### Muuta
 
-[laskarit](https://github.com/koenol/ot-harjoitustyo/tree/main/laskarit)<br>
 Python version `3.10`
 
 ## Dokumentaatio

@@ -1,6 +1,6 @@
 import pygame
 from ui.elements import Button
-from ui.game_view import GameView
+from services.game_view import GameView
 
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
