@@ -15,4 +15,5 @@
 | 28.11. | 0,5   | added test banner with custom font                       |
 | 28.11. | 0,75  | lisätty taustamusiikki soundcloud.com game-view          |
 | 28.11. | 0,75  | fixing pylint errors                                     |
+| 28.11. | 0,5   | alustava pakkauskaavio                                   |
 |  yht   | 15,25 |                                                          |

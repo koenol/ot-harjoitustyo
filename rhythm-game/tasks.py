@@ -10,6 +10,10 @@ def pty_status():
         return False
 
 @task
+def lint(ctx):
+    ctx.run("pylint src", pty=pty_status())
+
+@task
 def start(ctx):
     ctx.run("python src/index.py", pty=pty_status())
 
