@@ -6,3 +6,5 @@
 -   Tietokanta yhteys alustettu (vain yhteyden luonti testattu)
 
 ## Viikko4
+
+-   db refraktorointia
