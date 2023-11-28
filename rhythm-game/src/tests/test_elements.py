@@ -1,6 +1,7 @@
 import unittest
 from ..ui.elements import Button
 
+
 class TestButton(unittest.TestCase):
     def setUp(self):
         self.play_button = Button(0, 0, 200, 100, "Play", "play")

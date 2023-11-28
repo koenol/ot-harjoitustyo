@@ -6,6 +6,7 @@ WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 600
 FPS = 60
 
+
 class MainView:
     def __init__(self):
 
@@ -16,12 +17,11 @@ class MainView:
         play_x = (main_surface.get_width() - 200) // 2
         play_y = (main_surface.get_height() - 60) // 2
 
-        #refractor this to elements
+        # refractor this to elements
         banner_font = pygame.font.Font("rhythm-game\src\static\RapunledRegular-axZLJ.otf", 32)
-        banner_text = banner_font.render("Rhythm Game", True, (0,0,0))
+        banner_text = banner_font.render("Rhythm Game", True, (0, 0, 0))
         banner_text_rect = banner_text.get_rect()
         banner_text_rect.center = (WINDOW_WIDTH//2 + 100, WINDOW_HEIGHT//2 - 200)
-
 
         play_button = Button(play_x, play_y, 200, 100, "Play", "play")
 
@@ -34,7 +34,6 @@ class MainView:
                     if event.button == 1:
                         if play_button.rect.collidepoint(event.pos):
                             GameView()
-                            
 
             main_surface.fill((246, 246, 246))
             main_surface.blit(banner_text, banner_text_rect)

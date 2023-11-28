@@ -26,8 +26,8 @@ Tämän jälkeen näkymä palaa main-näkymään.
 
 -   Pelaaja pystyy tarkastelemaan top10 tuloksia
     -   Tulos sisältää tuloksen ja pelaajan nimimerkin
--   Pelaaja pystyy aloittamaan uuden pelin päävalikosta
-    -   Peli käynnistyy Play nappulasta
+-   Pelaaja pystyy aloittamaan uuden pelin päävalikosta [TEHTY]
+    -   Peli käynnistyy Play nappulasta [TEHTY]
 
 ## Pelin aikana
 
@@ -37,6 +37,7 @@ Tämän jälkeen näkymä palaa main-näkymään.
 -   Pelaaja näkee tuloksensa vasemmasta yläkulmasta
     -   Hit blockkeihin osuminen kasvattaa pisteitä
     -   Combo pitää kirjaa siitä kuinka moneen hit blockkiin pelaaja on osunut jaksossa.
+-   Pelillä on taustamusiikki [TEHTY]
 
 ## Pelin päättyminen
 
