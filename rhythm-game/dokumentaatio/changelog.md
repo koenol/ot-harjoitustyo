@@ -13,3 +13,9 @@
 -   alkuvalikkoon lisättiin pelin banneri
 -   lisättiin game_view taustamusiikki
 -   muokattiin bgm-väriä vähemmän silmiä rasittavaks: white (255, 255, 255) -> white smoke (246, 246, 246)
+
+## Viikko5
+
+-   Lisättiin satunnaisesti spawnaavat sound-blockit
+-   Pelaaja pystyy kontrolloimaan player_buttoneita näppäimillä (A,S,D)
+-   Pelaaja pystyy keräämään pisteitä ajoittamalla player_button painikkeen sound-blockin kanssa
