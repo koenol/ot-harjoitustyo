@@ -22,4 +22,5 @@
 | 5.12.  | 0,75 | gameview lisätty sound_block ja satunnais-spawn          |
 | 5.12.  | 0,5  | gameview lisätty toiminallisuus pisteiden keräämiseksi   |
 | 5.12.  | 0,75 | fixing pylint errors                                     |
-|  yht   | 19   |                                                          |
+| 5.12.  | 0,25 | release version                                          |
+|  yht   | 20   |                                                          |
