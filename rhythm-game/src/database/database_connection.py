@@ -13,4 +13,3 @@ class DatabaseConnection:
             conn.commit()
         else:
             conn = sqlite3.connect("src/data/scores.db")
-        return conn

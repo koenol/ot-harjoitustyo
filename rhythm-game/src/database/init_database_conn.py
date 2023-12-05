@@ -5,4 +5,4 @@ class DatabaseInit():
         pass
 
     def initialize_database():
-        DatabaseConnection().get_database_connection()
+        DatabaseConnection.get_database_connection()
