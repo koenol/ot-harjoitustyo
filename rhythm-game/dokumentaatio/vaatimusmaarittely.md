@@ -32,10 +32,10 @@ Tämän jälkeen näkymä palaa main-näkymään.
 ## Pelin aikana
 
 -   Pelaajan tavoitteena on painaa näppäimiä sovelluksen esittämässä järjestyksessä kun hit block osuu kohdalle.
-    -   Alustavat näppäimet ovat vasemmalta oikealla "A, S, D"
-    -   Hit blockit putoavat ylhäältä alas
+    -   Alustavat näppäimet ovat vasemmalta oikealla "A, S, D" | TEHTY |
+    -   Hit blockit putoavat ylhäältä alas | TEHTY |
 -   Pelaaja näkee tuloksensa vasemmasta yläkulmasta
-    -   Hit blockkeihin osuminen kasvattaa pisteitä
+    -   Hit blockkeihin osuminen kasvattaa pisteitä | TEHTY |
     -   Combo pitää kirjaa siitä kuinka moneen hit blockkiin pelaaja on osunut jaksossa.
 -   Pelillä on taustamusiikki | TEHTY |
 
