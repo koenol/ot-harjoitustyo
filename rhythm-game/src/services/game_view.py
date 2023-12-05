@@ -41,8 +41,8 @@ class GameView:
         pygame.mixer.music.load("src/static/Reminiscent-Of-Spring.mp3")
         pygame.mixer.music.play(1, 0.0, 8000)
         pygame.mixer.music.set_volume(0.40)
-        block_x = WINDOW_WIDTH // 2 - 256 - BUTTON_SIZE
-        block_y = WINDOW_HEIGHT // 2
+        block_x = -100
+        block_y = random.choice(x_spawn_coords)
         running = True
         button1_rect = pygame.draw.rect(game_surface, (255, 0, 0), button1_coord)
         button2_rect = pygame.draw.rect(game_surface, (0, 255, 0), button2_coord)
