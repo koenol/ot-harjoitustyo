@@ -1,10 +1,12 @@
 ## pakkauskaavio (alustava / tämän hetkinen)
 ```mermaid
 graph TD;
-    index.py --> ui.MainView;
+    index.py --> UI;
     index.py --> database;
-    ui.MainView --> pygame;
-    ui.MainView --> ui.elements;
-    ui.MainView --> services.GameView;
-    services.GameView --> pygame;
+    UI --> pygame;
+    UI --> Player
+    UI --> elements
+    UI --> View --> GameView;
+    UI --> View --> MainView;
+    UI --> View --> ResultView
 ```
