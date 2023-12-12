@@ -28,4 +28,5 @@
 | 6.12.  | 1    | luotu entities.Player.py, kirjaa pelaajan tiedot         |
 | 6.12.  | 0,5  | poistettu old main_view.py and game.view.py. yritetty    |
 |        |      | korjata pylint import erroria, mutta ei vielä toimi      |
+| 6.12.  | 1    | lisätty result-näkymä ja combo-toiminto                  |
 |  yht   | 20   |                                                          |

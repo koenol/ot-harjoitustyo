@@ -34,7 +34,9 @@ class UI:
                     if event.button == 1:
                         if play_button.rect.collidepoint(event.pos):
                             self._show_game_view()
-                            self._show_result_view()
+                            if self.player.get_lives() == 0:
+                                self._show_result_view()
+                            self.player.reset_all()
                             self._show_main_view()
 
             self.current_view.screen.fill((246, 246, 246))

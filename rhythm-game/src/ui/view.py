@@ -24,8 +24,37 @@ class ResultView(View):
         super().__init__()
         pygame.display.set_caption("Rytmipeli - Result")
         self.player = player
-        while True:
-            pass
+        self._start()
+
+    def _start(self):
+        result_font = pygame.font.SysFont("gabriola", 76)
+        result_text = result_font.render(f"Result", True, (0, 0, 0), (246, 246, 246))
+        result_rect = result_text.get_rect()
+        result_rect.topleft = (10, 10)
+
+        score_font = pygame.font.SysFont("gabriola", 32)
+        score_text = score_font.render(f"Final Score: {str(self.player.get_score())}", True, (0, 0, 0), (246, 246, 246))
+        score_rect = score_text.get_rect()
+        score_rect.topleft = (10, 100)
+
+        combo_font = pygame.font.SysFont("gabriola", 32)
+        combo_text = combo_font.render(f"Longest Combo: {str(self.player.get_longest_combo())}", True, (0, 0, 0), (246, 246, 246))
+        combo_rect = combo_text.get_rect()
+        combo_rect.topleft = (10, 132)
+
+        running = True
+        while running:
+            self.screen.fill((246, 246, 246))
+            self.screen.blit(result_text, result_rect)
+            self.screen.blit(score_text, score_rect)
+            self.screen.blit(combo_text, combo_rect)
+            pygame.display.update()
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    running = False
+
+
+
 
 class GameView(View):
     def __init__(self, player):
@@ -38,17 +67,19 @@ class GameView(View):
     def _start(self):
         WINDOW_HEIGHT = self.height
         WINDOW_WIDTH = self.width
-        FPS = self.fps
         BUTTON_SIZE = 48
         BLOCK_SPEED = 5
 
         clock = pygame.time.Clock()
-        #score = 0
-        #lives = 3
         score_font = pygame.font.SysFont("gabriola", 48)
         score_text = score_font.render(f"Score: {str(self.player.get_score())}", True, (0, 0, 0), (246, 246, 246))
         score_rect = score_text.get_rect()
         score_rect.topleft = (10, 10)
+
+        combo_font = pygame.font.SysFont("gabriola", 48)
+        combo_text = combo_font.render(f"Combo: {str(self.player.get_current_combo())}", True, (0, 0, 0), (246, 246, 246))
+        combo_rect = combo_text.get_rect()
+        combo_rect.topleft = (10, 50)
 
         button1_x = WINDOW_WIDTH // 2 - 256 - BUTTON_SIZE
         button1_y = WINDOW_HEIGHT // 2 + 164
@@ -67,16 +98,15 @@ class GameView(View):
             (WINDOW_WIDTH // 2 - BUTTON_SIZE),
             (WINDOW_WIDTH // 2 + 256 - BUTTON_SIZE),
         ]
-        game_surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
         pygame.mixer.music.load("src/static/Reminiscent-Of-Spring.mp3")
         pygame.mixer.music.play(1, 0.0, 8000)
         pygame.mixer.music.set_volume(0.40)
         block_y = -100
         block_x = random.choice(x_spawn_coords)
         running = True
-        button1_rect = pygame.draw.rect(game_surface, (255, 0, 0), button1_coord)
-        button2_rect = pygame.draw.rect(game_surface, (0, 255, 0), button2_coord)
-        button3_rect = pygame.draw.rect(game_surface, (0, 0, 255), button3_coord)
+        button1_rect = pygame.draw.rect(self.screen, (255, 0, 0), button1_coord)
+        button2_rect = pygame.draw.rect(self.screen, (0, 255, 0), button2_coord)
+        button3_rect = pygame.draw.rect(self.screen, (0, 0, 255), button3_coord)
 
         while running:
             for event in pygame.event.get():
@@ -93,14 +123,16 @@ class GameView(View):
                             block_x, block_y, BUTTON_SIZE + 32, BUTTON_SIZE))
                     ):
                         self.player.increase_score()
+                        self.player.increase_combo()
                         block_y = -100
                         block_x = random.choice(x_spawn_coords)
 
-            game_surface.fill((246, 246, 246))
+            self.screen.fill((246, 246, 246))
 
             if block_y > WINDOW_HEIGHT:
                 block_y = -100
                 block_x = random.choice(x_spawn_coords)
+                self.player.reset_combo()
                 self.player.decrease_lives()
 
                 if self.player.get_lives() == 0:
@@ -110,14 +142,16 @@ class GameView(View):
                 block_y += BLOCK_SPEED
 
             pygame.draw.rect(
-                game_surface, (0, 0, 0), (block_x, block_y, BUTTON_SIZE + 32, BUTTON_SIZE)
+                self.screen, (0, 0, 0), (block_x, block_y, BUTTON_SIZE + 32, BUTTON_SIZE)
                 )
 
-            button1_rect = pygame.draw.rect(game_surface, (255, 0, 0), button1_coord)
-            button2_rect = pygame.draw.rect(game_surface, (0, 255, 0), button2_coord)
-            button3_rect = pygame.draw.rect(game_surface, (0, 0, 255), button3_coord)
+            button1_rect = pygame.draw.rect(self.screen, (255, 0, 0), button1_coord)
+            button2_rect = pygame.draw.rect(self.screen, (0, 255, 0), button2_coord)
+            button3_rect = pygame.draw.rect(self.screen, (0, 0, 255), button3_coord)
 
             score_text = score_font.render(f"Score: {str(self.player.get_score())}", True, (0, 0, 0), (246, 246, 246))
-            game_surface.blit(score_text, score_rect)
-            clock.tick(FPS)
+            combo_text = combo_font.render(f"Combo: {str(self.player.get_current_combo())}", True, (0, 0, 0), (246, 246, 246))
+            self.screen.blit(score_text, score_rect)
+            self.screen.blit(combo_text, combo_rect)
+            clock.tick(self.fps)
             pygame.display.update()
