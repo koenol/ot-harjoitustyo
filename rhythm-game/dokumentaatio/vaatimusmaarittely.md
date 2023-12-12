@@ -36,14 +36,14 @@ Tämän jälkeen näkymä palaa main-näkymään.
     -   Hit blockit putoavat ylhäältä alas | TEHTY |
 -   Pelaaja näkee tuloksensa vasemmasta yläkulmasta
     -   Hit blockkeihin osuminen kasvattaa pisteitä | TEHTY |
-    -   Combo pitää kirjaa siitä kuinka moneen hit blockkiin pelaaja on osunut jaksossa.
+    -   Combo pitää kirjaa siitä kuinka moneen hit blockkiin pelaaja on osunut jaksossa. | TEHTY |
 -   Pelillä on taustamusiikki | TEHTY |
 
 ## Pelin päättyminen
 
 -   Kun peli päättyy pelaajalle esitetään pelin tulos
-    -   Peli siirtyy result-näkymään
-    -   Pelaajalle näytetään pelin lopputulos, pisin combo, rank ja mahdolliset multiplierit
+    -   Peli siirtyy result-näkymään | TEHTY |
+    -   Pelaajalle näytetään pelin lopputulos, pisin combo, rank ja mahdolliset multiplierit | Osittain TEHTY |
 -   Pelaajalta pyydetään nimimerkki
     -   Nimimerkki on vapaaehtoinen
 -   Pelin tiedot tallennetaan
