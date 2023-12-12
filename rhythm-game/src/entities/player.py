@@ -50,11 +50,11 @@ class Player:
         self.combo = 0
 
     def _save_longest_combo(self):
-        '''Tallettaa pelaajan nykyisen combon vanhan pisimmän kombon tilalle jos se on pidempi kuin edellinen
+        '''Tallettaa pelaajan nykyisen combon vanhan pisimmän kombon tilalle jos se on pidempi kuin 
+        edellinen
         
         '''
         self.best_combo = self.combo
-    
     def get_current_combo(self):
         '''Palauttaa pelaajan nykyisen combon
         
@@ -70,3 +70,4 @@ class Player:
             longest_combo (int): pelaajan pisin combo
         '''
         return self.get_longest_combo
+    
