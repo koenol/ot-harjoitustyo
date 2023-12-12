@@ -23,4 +23,7 @@
 | 5.12.  | 0,5  | gameview lisätty toiminallisuus pisteiden keräämiseksi   |
 | 5.12.  | 0,75 | fixing pylint errors                                     |
 | 5.12.  | 0,25 | release version                                          |
+| 6.12.  | 1,5  | view refaktorointia, uudet ui.py, ui.view luotu.         |
+|        |      | tavoitteena ui ja logiikan erottelu.                     |
+| 6.12.  | 1    | luotu entities.Player.py, kirjaa pelaajan tiedot         |
 |  yht   | 20   |                                                          |
