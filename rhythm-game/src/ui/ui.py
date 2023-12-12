@@ -36,7 +36,7 @@ class UI:
                             self._show_game_view()
                             if self.player.get_lives() == 0:
                                 self._show_result_view()
-                            self.player.reset_all()
+                            self.player.__init__()
                             self._show_main_view()
 
             self.current_view.screen.fill((246, 246, 246))

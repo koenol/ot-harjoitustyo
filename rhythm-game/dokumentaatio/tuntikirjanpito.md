@@ -23,10 +23,12 @@
 | 5.12.  | 0,5  | gameview lisätty toiminallisuus pisteiden keräämiseksi   |
 | 5.12.  | 0,75 | fixing pylint errors                                     |
 | 5.12.  | 0,25 | release version                                          |
-| 6.12.  | 1,5  | view refaktorointia, uudet ui.py, ui.view luotu.         |
+| 6.12.  | 2    | view refaktorointia, uudet ui.py, ui.view luotu.         |
 |        |      | tavoitteena ui ja logiikan erottelu.                     |
 | 6.12.  | 1    | luotu entities.Player.py, kirjaa pelaajan tiedot         |
 | 6.12.  | 0,5  | poistettu old main_view.py and game.view.py. yritetty    |
 |        |      | korjata pylint import erroria, mutta ei vielä toimi      |
 | 6.12.  | 1    | lisätty result-näkymä ja combo-toiminto                  |
+| 6.12.  | 0,5  | Update pakkauskaavio, lisätty sekvenssikaavio            |
+| 6.12.  | 0,5  | docstring luotu player.py luokalle                       |
 |  yht   | 20   |                                                          |
