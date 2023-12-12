@@ -31,4 +31,5 @@
 | 6.12.  | 1    | lisätty result-näkymä ja combo-toiminto                  |
 | 6.12.  | 0,5  | Update pakkauskaavio, lisätty sekvenssikaavio            |
 | 6.12.  | 0,5  | docstring luotu player.py luokalle                       |
-|  yht   | 20   |                                                          |
+| 6.12.  | 0,5  | Dokumentaation päivitys + release                        |
+|  yht   | 26   |                                                          |
