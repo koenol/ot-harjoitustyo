@@ -2,7 +2,7 @@ import pygame
 from ui.elements import Button
 from ui.view import *
 from services.main_loop import MainLoopService
-from entities.Player import Player
+from entities.player import Player
 
 class UI:
     def __init__(self):

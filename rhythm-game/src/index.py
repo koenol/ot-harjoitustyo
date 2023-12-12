@@ -1,5 +1,5 @@
 from database.init_database_conn import DatabaseInit
-from ui.ui import *
+from ui.ui import UI
 
 
 def main():
