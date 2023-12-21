@@ -20,10 +20,11 @@ class MainView(View):
         pygame.display.set_caption("Rytmipeli - Main Menu")
 
 class ResultView(View):
-    def __init__(self, player):
+    def __init__(self, connection, player):
         super().__init__()
         pygame.display.set_caption("Rytmipeli - Result")
         self.player = player
+        self.conn = connection
         self._start()
 
     def _start(self):
@@ -41,6 +42,12 @@ class ResultView(View):
         combo_text = combo_font.render(f"Longest Combo: {str(self.player.get_longest_combo())}", True, (0, 0, 0), (246, 246, 246))
         combo_rect = combo_text.get_rect()
         combo_rect.topleft = (10, 132)
+
+        if self.conn.check_highscore(self.player.get_score()):
+            print("yeo")
+            self.conn.add_new_highscore(self.player)
+        else:
+            print("nope!")
 
         running = True
         while running:

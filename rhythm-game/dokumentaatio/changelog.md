@@ -25,3 +25,4 @@
 -   Pelaaja meneillä olevasta combosta pidetään kirjaa
 -   Peli päättyy jos pelaaja missaa 3 sound-blockkia
 -   Pelaajalle esitetään pelin tulos sen päätyttyä (Score + Longest Combo)
+

@@ -32,4 +32,7 @@
 | 6.12.  | 0,5  | Update pakkauskaavio, lisätty sekvenssikaavio            |
 | 6.12.  | 0,5  | docstring luotu player.py luokalle                       |
 | 6.12.  | 0,5  | Dokumentaation päivitys + release                        |
+| 21.12. | 0,5  | db connection korjaus                                    |
+| 21.12. | 1    | uudet db komennot lisätty                                |
+| 21.12. | 1    | highscoret lisätty etusivulle                            |
 |  yht   | 26   |                                                          |

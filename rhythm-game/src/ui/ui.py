@@ -13,7 +13,7 @@ class UI:
         self.highscores = self.conn.display_highscores()
         self._start()
 
-    def _update_highscores(self):
+    def _update_highscore_view(self):
         self.highscores = self.conn.display_highscores()
 
     def _start(self):
@@ -43,8 +43,7 @@ class UI:
                             self._show_game_view()
                             if self.player.get_lives() == 0:
                                 self._show_result_view()
-                                self.conn.add_new_highscore(self.player)
-                                self._update_highscores()
+                                self._update_highscore_view()
                             self.player.__init__()
                             self._show_main_view()
 
@@ -56,6 +55,7 @@ class UI:
                 score_text = highscore_font.render(text, True, (0, 0, 0), (246, 246, 246))
                 self.current_view.screen.blit(score_text, (10, y_position))
                 y_position += 24
+                
             self.current_view.screen.blit(banner_text, banner_text_rect)
             play_button.draw(self.current_view.screen)
             pygame.display.update()
@@ -69,4 +69,4 @@ class UI:
         self.current_view = GameView(self.player)
 
     def _show_result_view(self):
-        self.current_view = ResultView(self.player)
+        self.current_view = ResultView(self.conn, self.player)

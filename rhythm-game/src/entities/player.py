@@ -10,7 +10,7 @@ class Player:
     def __init__(self):
         '''Luokan konstruktori, joka alustaa pelaajan attribuutit'''
         self.score = 0
-        self.lives = 3
+        self.lives = 1
         self.combo = 0
         self.best_combo = 0
         self.name = "ABC"
