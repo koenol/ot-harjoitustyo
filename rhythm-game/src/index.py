@@ -1,6 +1,5 @@
 from ui.ui import UI
 
-
 def main():
     UI()
 

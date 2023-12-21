@@ -13,6 +13,10 @@ class Player:
         self.lives = 3
         self.combo = 0
         self.best_combo = 0
+        self.name = "ABC"
+
+    def get_name(self):
+        return self.name
 
     def get_score(self):
         '''Palauttaa pelaajan nykyisen pistemäärän
@@ -54,7 +58,8 @@ class Player:
         edellinen
         
         '''
-        self.best_combo = self.combo
+        if self.combo >= self.best_combo:
+            self.best_combo = self.combo
     def get_current_combo(self):
         '''Palauttaa pelaajan nykyisen combon
         
@@ -69,5 +74,5 @@ class Player:
         Returns:
             longest_combo (int): pelaajan pisin combo
         '''
-        return self.get_longest_combo
+        return self.best_combo
     
