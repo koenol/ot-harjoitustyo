@@ -42,4 +42,5 @@
 | 22.12. | 1,5  | name input for highscores                                |
 | 22.12. | 2    | refactored main view                                     |
 | 22.12. | 1,5  | yksikkötestesjä player.py                                |
-|  yht   | 26   |                                                          |
+| 22.12. | 2    | minor changes & dokumentaation päivitys                  |
+|  yht   | 39,75|                                                          |
