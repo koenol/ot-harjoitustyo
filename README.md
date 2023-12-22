@@ -19,6 +19,16 @@ Python version `3.10`
 -   [Changelog](https://github.com/koenol/ot-harjoitustyo/tree/main/rhythm-game/dokumentaatio/changelog.md)<br>
 -   [Release](https://github.com/koenol/ot-harjoitustyo/releases/tag/viikko5-1)
 
-## Asennus
+## Asennus & Käynnistäminen
 
-**tulossa**
+Asenna riippuvuudet komennolla:
+
+```bash
+poetry install
+```
+
+Käynnistä ohjelma komennolla:
+
+```
+poetry run invoke start
+```
