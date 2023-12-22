@@ -24,30 +24,30 @@ Tämän jälkeen näkymä palaa main-näkymään.
 
 ## Ennen pelaamista
 
--   Pelaaja pystyy tarkastelemaan top10 tuloksia
-    -   Tulos sisältää tuloksen ja pelaajan nimimerkin
+-   Pelaaja pystyy tarkastelemaan top10 tuloksia | TEHTY |
+    -   Tulos sisältää tuloksen ja pelaajan nimimerkin | TEHTY |
 -   Pelaaja pystyy aloittamaan uuden pelin päävalikosta | TEHTY |
     -   Peli käynnistyy Play nappulasta | TEHTY |
 
 ## Pelin aikana
 
--   Pelaajan tavoitteena on painaa näppäimiä sovelluksen esittämässä järjestyksessä kun hit block osuu kohdalle.
+-   Pelaajan tavoitteena on painaa näppäimiä sovelluksen esittämässä järjestyksessä kun hit block osuu kohdalle. | TEHTY |
     -   Alustavat näppäimet ovat vasemmalta oikealla "A, S, D" | TEHTY |
     -   Hit blockit putoavat ylhäältä alas | TEHTY |
--   Pelaaja näkee tuloksensa vasemmasta yläkulmasta
+-   Pelaaja näkee tuloksensa vasemmasta yläkulmasta | TEHTY |
     -   Hit blockkeihin osuminen kasvattaa pisteitä | TEHTY |
     -   Combo pitää kirjaa siitä kuinka moneen hit blockkiin pelaaja on osunut jaksossa. | TEHTY |
 -   Pelillä on taustamusiikki | TEHTY |
 
 ## Pelin päättyminen
 
--   Kun peli päättyy pelaajalle esitetään pelin tulos
+-   Kun peli päättyy pelaajalle esitetään pelin tulos | TEHTY |
     -   Peli siirtyy result-näkymään | TEHTY |
-    -   Pelaajalle näytetään pelin lopputulos, pisin combo, rank ja mahdolliset multiplierit | Osittain TEHTY |
--   Pelaajalta pyydetään nimimerkki
-    -   Nimimerkki on vapaaehtoinen
--   Pelin tiedot tallennetaan
-    -   Nimimerkki ja tulos tallennetaan top10 tilastoihin vain jos tulos on tarpeeksi hyvä
+    -   Pelaajalle näytetään pelin lopputulos, pisin combo, rank ja mahdolliset multiplierit | TEHTY |
+-   Pelaajalta pyydetään nimimerkki jos se yltää top10 tulokseen | TEHTY |
+    - Pelimerkin maksimipituus: 3 merkkiä | TEHTY |
+-   Pelin tiedot tallennetaan | TEHTY |
+    -   Nimimerkki ja tulos tallennetaan top10 tilastoihin vain jos tulos on tarpeeksi hyvä | TEHTY |
 
 ### Jatkokehitysideoita
 
@@ -55,9 +55,8 @@ Perusversion jälkeen peliin on suunnitteilla lisätoimintoja jotka parantavat p
 
 -   Setttings-näkymä, josta pelaaja pystyy muokkaamaan peliasetuksia esim. vaihtamaan pelinäppäimet
 -   Pelaajan konfiguraatio-asetukset voidaan tallentaan tekstitiedostoon ja ladata tarvittaessa
--   Lisätään mahdollisuus pelata DualSense-controlleria käyttäen (uuden kirjaston opettelu +1p) pypi: pydualsense
 -   Lisätään settingseihin offset/timing calibration
 -   Muutetaan result-näkymä huomioimaan top10 tulokset erikseen normaalista näkymästä
 -   Parannetaan pelielementtejä
-    -   Pelielementteihin osuma-efektejä
-    -   Score multipliers
+    -   Pelielementteihin osuma-efektejä | TEHTY |
+    -   Score multipliers | TEHTY |

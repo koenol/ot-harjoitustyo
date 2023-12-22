@@ -41,4 +41,5 @@
 | 22.12. | 2    | score multiplier and rank added, game also ends on timer |
 | 22.12. | 1,5  | name input for highscores                                |
 | 22.12. | 2    | refactored main view                                     |
+| 22.12. | 1,5  | yksikkötestesjä player.py                                |
 |  yht   | 26   |                                                          |

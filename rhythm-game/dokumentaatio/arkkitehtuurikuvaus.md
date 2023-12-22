@@ -1,4 +1,4 @@
-## pakkauskaavio (alustava)
+## pakkauskaavio
 ```mermaid
 graph TD;
     index.py --> ui.UI;
@@ -11,7 +11,7 @@ graph TD;
     UI --> ui.view --> ResultView
 ```
 
-## sekvenssikaaivo (alustava)
+## sekvenssikaaivo
 ```mermaid
 sequenceDiagram
     participant main
