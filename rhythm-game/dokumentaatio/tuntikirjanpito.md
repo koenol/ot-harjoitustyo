@@ -38,4 +38,6 @@
 | 21.12. | 0,75 | highscore table päivitys tehty niin että vanhat          |
 |        |      | poistetaan id:n perusteella kun uusi lisätään            |
 | 21.12. | 1,5  | paranneltu hitbox kun pelaaja osuu soundblock            |
+| 22.12. | 2    | score multiplier and rank added, game also ends on timer |
+| 22.12. | 1,5  | name input for highscores                                |
 |  yht   | 26   |                                                          |

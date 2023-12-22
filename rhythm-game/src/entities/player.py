@@ -25,13 +25,13 @@ class Player:
 
     def get_name(self):
         return self.name
-    
+
     def get_game_state(self):
         return self.game_state
 
     def set_game_state_start(self):
         self.game_state = True
-    
+
     def set_game_state_end(self):
         self.game_state = False
 
@@ -95,16 +95,18 @@ class Player:
             longest_combo (int): pelaajan pisin combo
         '''
         return self.best_combo
-    
+
+    def add_new_nickname(self, nick):
+        self.name = nick
+
     def get_rank(self, score):
         max_score = 2200
 
         if score >= 0.9 * max_score:
             return 'A'
-        elif score >= 0.8 * max_score:
+        if score >= 0.8 * max_score:
             return 'B'
-        elif score >= 0.75 * max_score:
+        if score >= 0.75 * max_score:
             return 'C'
-        else:
-            return 'D'
+        return 'D'
     

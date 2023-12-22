@@ -1,6 +1,5 @@
 import pygame
 import random
-import pydualsense
 
 class View:
     def __init__(self):
@@ -61,16 +60,21 @@ class ResultView(View):
         new_highscore_rect.topleft = (10, 164)
 
         rank_font = pygame.font.SysFont("gabriola", 64)
-        rank_text = rank_font.render(f"{self.player.get_rank(final_score)}", True, (0, 0, 0), (246, 246, 246))
+        rank_text = rank_font.render(f"RANK: {self.player.get_rank(final_score)}", True, (0, 0, 0), (246, 246, 246))
         rank_rect = rank_text.get_rect()
         rank_rect.topleft = (40, 300)
 
+        input_font = pygame.font.SysFont("gabriola", 32)
+        input_rect = pygame.Rect(200, 250, 400, 50)
+        input_text = ""
+        max_input_length = 3
+        highscore = False
 
         self.screen.fill((246, 246, 246))
 
         if self.conn.check_highscore(self.player.get_final_score()):
             self.screen.blit(new_highscore_text, new_highscore_rect)
-            self.conn.add_new_highscore(self.player)
+            highscore = True
     
         running = True
         while running:
@@ -79,10 +83,30 @@ class ResultView(View):
             self.screen.blit(combo_text, combo_rect)
             self.screen.blit(final_text, final_rect)
             self.screen.blit(rank_text, rank_rect)
-            pygame.display.update()
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
+
+                if highscore:
+                    text_surface = input_font.render(input_text, True, (0, 0, 0))
+                    width = max(200, input_rect.w + 10)
+                    input_rect.w = width
+                    self.screen.blit(text_surface, (input_rect.x + 5, input_rect.y + 5))
+
+                    if event.type == pygame.KEYDOWN:
+                        if event.unicode.isalpha() and len(input_text) < max_input_length:
+                            input_text += event.unicode.upper()
+
+                        nickname = input_text.strip()
+                        print(len(nickname))
+                        if len(nickname) == 3:
+                            self.player.add_new_nickname(nickname)
+                            self.conn.add_new_highscore(self.player)
+                            running = False
+
+            pygame.display.update()
+
 
 class GameView(View):
     def __init__(self, player):

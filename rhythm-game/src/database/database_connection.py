@@ -21,6 +21,8 @@ class DatabaseConnection:
 
     def check_highscore(self, score):
         highscores = DatabaseCommands.get_highscores(self.conn)
+        if len(highscores) < 10:
+            return True
         return score > highscores[-1][1]
 
     def add_new_highscore(self, player):
