@@ -17,7 +17,7 @@ Python version `3.10`
 -   [Testausdokumentti](https://github.com/koenol/ot-harjoitustyo/tree/main/rhythm-game/dokumentaatio/testaus.md)<br>
 -   [Tuntikirjanpito](https://github.com/koenol/ot-harjoitustyo/tree/main/rhythm-game/dokumentaatio/tuntikirjanpito.md)<br>
 -   [Changelog](https://github.com/koenol/ot-harjoitustyo/tree/main/rhythm-game/dokumentaatio/changelog.md)<br>
--   [Release](https://github.com/koenol/ot-harjoitustyo/releases/tag/viikko5-1)
+-   [Release](https://github.com/koenol/ot-harjoitustyo/releases/tag/final)
 
 ## Asennus & Käynnistäminen
 
