@@ -25,6 +25,7 @@ class ResultView(View):
         pygame.display.set_caption("Rytmipeli - Result")
         self.player = player
         self.conn = connection
+        self.player.calculate_final_score()
         self._start()
 
     def _start(self):
@@ -43,8 +44,6 @@ class ResultView(View):
         combo_rect = combo_text.get_rect()
         combo_rect.topleft = (10, 132)
 
-        self.player.calculate_final_score()
-
         final_font = pygame.font.SysFont("gabriola", 32)
         final_text = final_font.render(f"Final Score: {self.player.get_final_score()}", True, (0, 0, 0), (246, 246, 246))
         final_rect = final_text.get_rect()
@@ -53,7 +52,12 @@ class ResultView(View):
         new_highscore_font = pygame.font.SysFont("gabriola", 32)
         new_highscore_text = new_highscore_font.render(f"NEW HIGHSCORE!", True, (0, 0, 0), (246, 246, 246))
         new_highscore_rect = new_highscore_text.get_rect()
-        new_highscore_rect.topleft = (10, 164)
+        new_highscore_rect.topleft = (10, 228)
+
+        nickname_font = pygame.font.SysFont("gabriola", 32)
+        nickname_text = nickname_font.render(f"Type nickname to continue:", True, (0, 0, 0), (246, 246, 246))
+        nickname_rect = nickname_text.get_rect()
+        nickname_rect.topleft = (80, 470)
 
         rank_font = pygame.font.SysFont("gabriola", 64)
         rank_text = rank_font.render(f"RANK: {self.player.get_rank()}", True, (0, 0, 0), (246, 246, 246))
@@ -70,6 +74,7 @@ class ResultView(View):
 
         if self.conn.check_highscore(self.player.get_final_score()):
             self.screen.blit(new_highscore_text, new_highscore_rect)
+            self.screen.blit(nickname_text, nickname_rect)
             highscore = True
     
         running = True
