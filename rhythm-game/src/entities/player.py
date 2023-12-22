@@ -1,38 +1,60 @@
 class Player:
-    '''Luokka, jonka avulla pidetään kirjaa pelaajan tiedoista
+    '''Luokka, jonka avulla pidetään kirjaa pel9aajan tiedoista
 
     Attributes:
         score (int): pelaajan pisteet
         lives (int): pelaajan elämät
         combo (int): pelaajan nykyinen combo
         best_combo (int): pelaajan pisin combo pelin aikana
+        name (str): pelaajan nimi
+        game_state (boolean): pelin tila käynnissä/ei käynnissä
+        final_score (int): lopulliset pisteet
     '''
     def __init__(self):
         '''Luokan konstruktori, joka alustaa pelaajan attribuutit'''
         self.score = 0
-        self.lives = 2
+        self.lives = 3
         self.combo = 0
         self.best_combo = 0
-        self.name = "ABC"
+        self.name = ""
         self.game_state = False
         self.final_score = 0
 
-    def set_final_score(self, score):
-        self.final_score = score
+    def calculate_final_score(self):
+        '''
+        Laskee pelaajan final scoren
+        '''
+        multiplier = 1 + (self.best_combo / 100)
+        self.final_score = int(self.score * multiplier)
 
     def get_final_score(self):
+        '''
+        Palauttaa pelaajan final scoren
+        '''
         return self.final_score
 
     def get_name(self):
+        '''
+        Palauttaa pelaajan nimen
+        '''
         return self.name
 
     def get_game_state(self):
+        '''
+        Palauttaa pelin tilan
+        '''
         return self.game_state
 
     def set_game_state_start(self):
+        '''
+        Asettaa pelin tilaksi käynnissä
+        '''
         self.game_state = True
 
     def set_game_state_end(self):
+        '''
+        Asettaa pelin seis tilaan
+        '''
         self.game_state = False
 
     def get_score(self):
@@ -44,10 +66,11 @@ class Player:
         return self.score
 
     def increase_score_normal(self):
-        '''Kasvattaa pelaajan pistemäärää yhdellä.'''
+        '''Kasvattaa pelaajan pistemäärää 100:lla.'''
         self.score += 100
 
     def increase_score_perfect(self):
+        '''Kasvattaa pelaajan pistemäärää 200:lla'''
         self.score += 200
 
     def get_lives(self):
@@ -97,16 +120,20 @@ class Player:
         return self.best_combo
 
     def add_new_nickname(self, nick):
+        '''Asettaa pelaajalle nimimerkin'''
         self.name = nick
 
-    def get_rank(self, score):
-        max_score = 2200
+    def get_rank(self):
+        '''
+        Palauttaa pelaajan Rankin pisteisiin perustuen
+        '''
+        max_score = 6250
 
-        if score >= 0.9 * max_score:
+        if self.final_score >= 0.9 * max_score:
             return 'A'
-        if score >= 0.8 * max_score:
+        if self.final_score >= 0.8 * max_score:
             return 'B'
-        if score >= 0.75 * max_score:
+        if self.final_score >= 0.7 * max_score:
             return 'C'
         return 'D'
     

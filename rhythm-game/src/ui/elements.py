@@ -27,8 +27,8 @@ class MainViewElements:
         banner_text_rect.center = (width // 2 + 100, height // 2 - 150)
 
         highscore_font = pygame.font.SysFont("gabriola", 24)
-
         play_button = Button(play_x, play_y, 100, 50, "Play", "play")
+        
         screen.fill((246, 246, 246))
         y_position = 10
         for position, (name, score) in enumerate(highscores, start=1):

@@ -43,14 +43,10 @@ class ResultView(View):
         combo_rect = combo_text.get_rect()
         combo_rect.topleft = (10, 132)
 
-        final_score_multiplier = (1 + ((self.player.get_longest_combo() / 100)))
-        final_score = int(self.player.get_score() * final_score_multiplier)
-
-
-        self.player.set_final_score(final_score)
+        self.player.calculate_final_score()
 
         final_font = pygame.font.SysFont("gabriola", 32)
-        final_text = final_font.render(f"Final Score: {final_score}", True, (0, 0, 0), (246, 246, 246))
+        final_text = final_font.render(f"Final Score: {self.player.get_final_score()}", True, (0, 0, 0), (246, 246, 246))
         final_rect = final_text.get_rect()
         final_rect.topleft = (10, 196)
 
@@ -60,12 +56,12 @@ class ResultView(View):
         new_highscore_rect.topleft = (10, 164)
 
         rank_font = pygame.font.SysFont("gabriola", 64)
-        rank_text = rank_font.render(f"RANK: {self.player.get_rank(final_score)}", True, (0, 0, 0), (246, 246, 246))
+        rank_text = rank_font.render(f"RANK: {self.player.get_rank()}", True, (0, 0, 0), (246, 246, 246))
         rank_rect = rank_text.get_rect()
         rank_rect.topleft = (40, 300)
 
         input_font = pygame.font.SysFont("gabriola", 32)
-        input_rect = pygame.Rect(200, 250, 400, 50)
+        input_rect = pygame.Rect(200, 500, 200, 500)
         input_text = ""
         max_input_length = 3
         highscore = False
@@ -99,7 +95,6 @@ class ResultView(View):
                             input_text += event.unicode.upper()
 
                         nickname = input_text.strip()
-                        print(len(nickname))
                         if len(nickname) == 3:
                             self.player.add_new_nickname(nickname)
                             self.conn.add_new_highscore(self.player)
@@ -196,7 +191,8 @@ class GameView(View):
             button3_rect.width,
             button3_rect.height * 0.05
         )
-        hit_blocks = 10
+
+        hit_blocks = 25
         hit_nice = 100
         hit_perfect = 100
         end_timer = 0

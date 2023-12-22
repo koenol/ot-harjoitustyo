@@ -28,4 +28,7 @@
 
 ## Viikko7
 
--   Pelaaja pystyy tarkastelemaan top10 tuloksia ja uudet top10 tulokset rekisteröidään
+-   Pelaaja pystyy tarkastelemaan top10 tuloksia ja uudet top10 tulokset rekisteröidään jos pelaaja antaa 3-merkkisen nimimerkin
+-   Peli päättyy nyt jos elämät loppuvat tai pelaaja pääsee loppuun asti
+-   Pelaaja näkee myös tuloksensa Rankin: A,B,C tai D.
+-   Pelaajan lopulliset pisteet muodostuvat kaavalla: Score * (1.best_combo, esim. 1.24 (best_combo: 25))
