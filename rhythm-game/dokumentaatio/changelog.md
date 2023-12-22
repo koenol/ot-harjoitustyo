@@ -26,3 +26,6 @@
 -   Peli päättyy jos pelaaja missaa 3 sound-blockkia
 -   Pelaajalle esitetään pelin tulos sen päätyttyä (Score + Longest Combo)
 
+## Viikko7
+
+-   Pelaaja pystyy tarkastelemaan top10 tuloksia ja uudet top10 tulokset rekisteröidään

@@ -10,13 +10,30 @@ class Player:
     def __init__(self):
         '''Luokan konstruktori, joka alustaa pelaajan attribuutit'''
         self.score = 0
-        self.lives = 1
+        self.lives = 2
         self.combo = 0
         self.best_combo = 0
         self.name = "ABC"
+        self.game_state = False
+        self.final_score = 0
+
+    def set_final_score(self, score):
+        self.final_score = score
+
+    def get_final_score(self):
+        return self.final_score
 
     def get_name(self):
         return self.name
+    
+    def get_game_state(self):
+        return self.game_state
+
+    def set_game_state_start(self):
+        self.game_state = True
+    
+    def set_game_state_end(self):
+        self.game_state = False
 
     def get_score(self):
         '''Palauttaa pelaajan nykyisen pistemäärän
@@ -26,9 +43,12 @@ class Player:
         '''
         return self.score
 
-    def increase_score(self):
+    def increase_score_normal(self):
         '''Kasvattaa pelaajan pistemäärää yhdellä.'''
-        self.score += 1
+        self.score += 100
+
+    def increase_score_perfect(self):
+        self.score += 200
 
     def get_lives(self):
         '''Palauttaa pelaajan jäljellä olevat elämät
@@ -75,4 +95,16 @@ class Player:
             longest_combo (int): pelaajan pisin combo
         '''
         return self.best_combo
+    
+    def get_rank(self, score):
+        max_score = 2200
+
+        if score >= 0.9 * max_score:
+            return 'A'
+        elif score >= 0.8 * max_score:
+            return 'B'
+        elif score >= 0.75 * max_score:
+            return 'C'
+        else:
+            return 'D'
     

@@ -11,19 +11,21 @@ class DatabaseCommands:
                 username TEXT,
                 score INTEGER);
                 ''')
-
+    @staticmethod
     def insert_new_highscore(connection, nickname, score):
         crs = connection.cursor()
         crs.execute('INSERT INTO Scores (username, score) VALUES (?, ?)', (nickname, score))
 
+    @staticmethod
     def get_highscores(connection):
         crs = connection.cursor()
         crs.execute('SELECT username, score FROM Scores ORDER BY score DESC LIMIt 10')
         return crs.fetchall()
-    
+
+    @staticmethod
     def remove_old_highscore(connection):
         crs = connection.cursor()
         crs.execute('SELECT id FROM Scores ORDER BY score DESC LIMIT -1 OFFSET 10')
         list_of_removeable_highscores = crs.fetchall()
-        for id in list_of_removeable_highscores:
-            crs.execute('DELETE FROM Scores WHERE id = (?)', (id))
+        for x in list_of_removeable_highscores:
+            crs.execute('DELETE FROM Scores WHERE id = (?)', (x))

@@ -35,4 +35,7 @@
 | 21.12. | 0,5  | db connection korjaus                                    |
 | 21.12. | 1    | uudet db komennot lisätty                                |
 | 21.12. | 1    | highscoret lisätty etusivulle                            |
+| 21.12. | 0,75 | highscore table päivitys tehty niin että vanhat          |
+|        |      | poistetaan id:n perusteella kun uusi lisätään            |
+| 21.12. | 1,5  | paranneltu hitbox kun pelaaja osuu soundblock            |
 |  yht   | 26   |                                                          |
